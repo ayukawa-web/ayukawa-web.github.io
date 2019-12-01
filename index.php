@@ -2,17 +2,18 @@
 <html lang="ja">
 
 <head profile="http://purl.org/net/ns/metaprof">
+	
+	<?php if(filter_input(INPUT_GET, 'dev') != "1"): ?>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141403798-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141403798-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-141403798-1');
-	</script>
-
+		  gtag('config', 'UA-141403798-1');
+		</script>
+	<?php endif; ?>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
@@ -21,11 +22,18 @@
 	<meta name="viewport" content="initial-scale=1.0" />
 	<meta name="ROBOTS" content="noarchive">
 
+	<?php //<link rel="shortcut icon" href="http://ayukawa.cc/favicon.gif"> ?>
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-	<link type="text/css" rel="stylesheet" href="style.css?190615" />
-	<script type="text/javascript" src="default.js?190615"></script>
+	<?php if(filter_input(INPUT_GET, 'dev') == "1"): ?>
+		<link type="text/css" rel="stylesheet" href="style.css?<?php echo date('His')?>" />
+		<script type="text/javascript" src="my.js?<?php echo date('His')?>"></script>
+	<?php else: ?>
+		<link type="text/css" rel="stylesheet" href="style.css?190615" />
+		<script type="text/javascript" src="default.js?190615"></script>
+	<?php endif; ?>
 
 	<script type="text/javascript" src="jquery.slideGallery.min.js?160617-2"></script>
 
