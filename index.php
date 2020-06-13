@@ -42,10 +42,12 @@
 	<script src="libraries/flickity/flickity.pkgd.min.js"></script>
 
 
-	<link rel='dns-prefetch' href='//s.w.org' />
-	<meta name='twitter:card' content='summary' />
-	<meta name='og:title' content='酒処 あゆ川' />
-	<meta name='og:description' content='' />
+	<meta name='twitter:card' content='summary_large_image' />
+	<meta property="og:url" content="https://ayukawa.cc/" />
+	<meta property='og:title' content='酒処 あゆ川' />
+	<meta property="og:site_name" content="酒処 あゆ川" />
+	<meta property='og:description' content='鮎釣りが大好きな店主が自ら釣った鮎をお客様にお出しします。馬刺しも好評です。長野県伊那市にある居酒屋です。お気軽にお越し下さい。' />
+	<meta property="og:image" content="https://ayukawa.cc/images/meal_ayu_1.jpg" />
 
 
 	<title>酒処 あゆ川</title>
